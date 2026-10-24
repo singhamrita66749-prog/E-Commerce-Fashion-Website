@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Madhubani Looms</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .product-page-container {
+            padding-top: 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+        .back-btn {
+            margin-bottom: 20px;
+            display: inline-block;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .back-btn:hover {
+            color: var(--primary-gold);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="Madhubani Looms Logo" style="height: 60px; width: auto;">
+            </a>
+            <div class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#shop" class="nav-link">Shop</a>
+                <a href="index.html#shop" class="nav-link">Collections</a>
+            </div>
+            <div class="nav-icons">
+                <button aria-label="Bag" class="icon-btn nav-myntra-btn cart-btn">
+                    <div class="icon-wrap" style="position: relative;">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" style="top: -8px; right: -12px;">0</span>
+                    </div>
+                    <span>Bag</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-page-container container">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Shop</a>
+        
+        <div id="product-loading" style="text-align: center; padding: 50px;">
+            <i class="fas fa-spinner fa-spin fa-3x" style="color: #ae946d;"></i>
+            <p>Gathering elegance...</p>
+        </div>
+
+        <div id="product-content" class="product-view-grid" style="display: none;">
+            <!-- Left: Images -->
+            <div class="product-gallery">
+                <div class="thumbnail-list" id="pd-thumbnails">
+                    <!-- Thumbnails injected here -->
+                </div>
+                <div class="main-image-container" id="pd-main-image-container">
+                    <img src="" alt="Product" id="pd-main-image" class="zoom-image">
+                </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div class="product-info-panel">
+                <h2 class="pd-brand" id="pd-brand">Brand Name</h2>
+                <h1 class="pd-title" id="pd-title">Product Title</h1>
+                <div class="pd-rating-badge">
+                    <span id="pd-rating">4.5</span> <i class="fas fa-star"></i> | <span id="pd-reviews">0</span> Reviews
+                </div>
+
+                <div class="pd-price-block">
+                    <span class="pd-price" id="pd-price">₹0</span>
+                    <span class="pd-original-price" id="pd-original-price">₹0</span>
+                    <span class="pd-discount" id="pd-discount">(0% OFF)</span>
+                </div>
+                <p class="inclusive-taxes">inclusive of all taxes</p>
+
+                <!-- Sizes -->
+                <div class="pd-sizes-section">
+                    <div class="pd-section-header">
+                        <h4>Select Size</h4>
+                    </div>
+                    <div class="pd-size-options" id="pd-size-options">
+                        <!-- Sizes injected here -->
+                    </div>
+                </div>
+
+                <!-- Colors -->
+                <div class="pd-colors-section" id="pd-color-section">
+                    <div class="pd-section-header">
+                        <h4>Colors</h4>
+                    </div>
+                    <div class="pd-color-options" id="pd-color-options">
+                        <!-- Colors injected here -->
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="pd-actions">
+                    <button class="btn btn-primary pd-add-bag" id="pd-add-bag-btn">
+                        <i class="fas fa-shopping-bag"></i> Add to Bag
+                    </button>
+                    <button class="btn btn-outline pd-wishlist" id="pd-wishlist-btn">
+                        <i class="far fa-heart"></i> WISHLIST
+                    </button>
+                </div>
+
+                <div class="pd-details-text">
+                    <h4>Product Details <i class="fas fa-file-alt"></i></h4>
+                    <p id="pd-description">Description goes here...</p>
+                    <div class="pd-meta-grid">
+                        <div class="meta-item">
+                            <span class="meta-label">Fabric</span>
+                            <span id="pd-fabric" class="meta-value">Cotton</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Category</span>
+                            <span id="pd-category" class="meta-value">Ethnic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast (Shared Style) -->
+    <div class="toast" id="toast">Item added to cart!</div>
+
+    <script src="js/product.js"></script>
+</body>
+
+</html>
